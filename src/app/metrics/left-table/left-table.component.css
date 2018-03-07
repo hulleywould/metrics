@@ -1,0 +1,66 @@
+.left-card {
+    width: 512px;
+    min-height: 85px;
+    max-height: 85px;
+    overflow: visible;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    z-index: 100;
+}
+
+.title {
+    color: white;
+    background-color: #009586;
+    width: inherit;
+}
+
+.mdl-option {
+    background-color: white;
+    z-index: 2;
+}
+
+.selector {
+    margin-left: 30px;
+}
+
+.label {
+    color: white;
+}
+
+.mdl-textfield__input {
+    color: white !important;
+}
+
+.tableContainer {
+    height: inherit;
+    max-height: 450px;
+    width: 512px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.47);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.47);
+}
+
+.list {
+    z-index: 10;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #009586;
+    border-radius: 10px;
+}

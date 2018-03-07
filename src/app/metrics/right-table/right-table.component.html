@@ -1,0 +1,16 @@
+<div class="right-card mdl-card mdl-shadow--2dp">
+  <div class="title mdl-card__title">
+    <div class="selector mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+        <input class="mdl-textfield__input" value="" id="country" readonly/>
+        <input value="" type="hidden" name="country"/>
+        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+        <label class="label mdl-textfield__label">Select Table</label>
+        <ul class="list mdl-menu mdl-menu--bottom-left mdl-js-menu">
+          <li *ngFor="let c of colors" class="choice mdl-menu__item" (click)="selectTable(c)">{{c}}</li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="tableContainer">
+  <app-table-choice [choice]=choice></app-table-choice>
+</div>

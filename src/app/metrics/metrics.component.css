@@ -1,0 +1,24 @@
+.mdl-textfield {
+    float: left;
+}
+
+.left-table {
+    margin-right: 2%;
+}
+
+.right-table {
+    margin-left: 2%;
+}
+
+.tablesContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.presetsContainer {
+    width: 100%;
+    padding-left: 19%;
+    padding-top: 20px;
+}

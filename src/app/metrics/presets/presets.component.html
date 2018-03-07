@@ -1,0 +1,10 @@
+<div class="selector mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+    <input class="mdl-textfield__input" value="" id="preset" readonly/>
+    <input value="" type="hidden" name="presets"/>
+    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+    <label class="mdl-textfield__label">Presets</label>
+    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" >
+      <li class="mdl-menu__item" data-selected="true">Pricing Summary</li>
+      <li *ngFor="let p of presets" class="mdl-menu__item" (click)="selectedPreset(p)">{{ p }}</li>
+    </ul>
+ </div>
