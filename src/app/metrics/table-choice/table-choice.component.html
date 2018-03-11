@@ -1,2 +1,4 @@
-<app-pricing-summary *ngIf="choice == 'Pricing Summary'"></app-pricing-summary>
-<app-hedging *ngIf="choice == 'Hedging'"></app-hedging>
+<div>
+    <app-pricing-summary *ngIf="switchTable() == 'Pricing Summary'"></app-pricing-summary>
+    <app-hedging *ngIf="switchTable() == 'Hedging'"></app-hedging>
+</div>

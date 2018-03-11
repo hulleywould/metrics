@@ -1,10 +1,11 @@
 <div>
     <div class="presetsContainer">
-         <app-presets></app-presets>
+         <app-presets (presetEvent)=recievePreset($event)></app-presets>
     </div>
+    
     <div class="tablesContainer mdl-grid">
         <div class="left-table mdl-cell">
-            <app-left-table></app-left-table>
+            <app-left-table [selectedPreset]=selectedPreset></app-left-table>
         </div>
         <div class="right-table mdl-cell">
             <app-right-table></app-right-table>

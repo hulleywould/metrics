@@ -6,11 +6,13 @@
         <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
         <label class="label mdl-textfield__label">Select Table</label>
         <ul class="list mdl-menu mdl-menu--bottom-left mdl-js-menu">
-          <li *ngFor="let c of colors" class="choice mdl-menu__item" (click)="selectTable(c)">{{c}}</li>
+          <li *ngFor="let t of tables" class="choice mdl-menu__item" (click)="selectTable(t)">{{t}}</li>
         </ul>
     </div>
   </div>
 </div>
 <div class="tableContainer">
-  <app-table-choice [choice]=choice></app-table-choice>
+  <app-table-choice 
+    [choice]=choice
+    [tables]=tables></app-table-choice>
 </div>

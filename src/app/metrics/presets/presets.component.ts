@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-presets',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./presets.component.css']
 })
 export class PresetsComponent implements OnInit {
-  presets = ['Commodity Fees', 'Pricing Summary + Hedging'];
+  presets = ['Pricing Summary', 'Commodity Fees', 'Pricing Summary + Hedging'];
+  chosenPreset: string;
+  @Output() presetEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -16,6 +18,8 @@ export class PresetsComponent implements OnInit {
 
   selectedPreset(selection) {
     console.log("selected preset is " + selection);
+    this.chosenPreset = selection;
+    this.presetEvent.emit(this.chosenPreset);
   }
 
 }

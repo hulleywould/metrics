@@ -17,8 +17,7 @@ export class BigTableComponent implements OnInit {
   }
 
   selectTable(selectedChoice) {
-    this.choice = selectedChoice;
-    console.log(this.choice);
+    return this.choice = selectedChoice;
   }
 
 }

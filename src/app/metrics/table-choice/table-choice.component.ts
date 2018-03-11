@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-table-choice',
@@ -8,10 +8,21 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TableChoiceComponent implements OnInit {
 
   @Input() choice;
-  constructor() { }
+  @Input() tables;
+
+  constructor() { 
+    
+  }
 
   ngOnInit() {
-    console.log("choice is " + this.choice);
+    this.tables.forEach(t => {
+      console.log("table in table choice " + t);  
+    });
+  }
+
+  switchTable() {
+    console.log("LOG: switch table " + this.choice);
+    return this.choice;
   }
 
 }

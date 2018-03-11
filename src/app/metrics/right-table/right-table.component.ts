@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightTableComponent implements OnInit {
   
-  colors = ['Pricing Summary', 'Hedging', 'Pricing at Different Funding Levels'];
+  tables = ['Pricing Summary', 'Hedging', 'Pricing at Different Funding Levels'];
   choice = "";
 
   constructor() { }
@@ -16,8 +16,7 @@ export class RightTableComponent implements OnInit {
   }
 
   selectTable(selectedChoice) {
-    this.choice = selectedChoice;
-    console.log(this.choice);
+    return this.choice = selectedChoice;
   }
 
 }

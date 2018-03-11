@@ -4,7 +4,6 @@
     <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
     <label class="mdl-textfield__label">Presets</label>
     <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" >
-      <li class="mdl-menu__item" data-selected="true">Pricing Summary</li>
       <li *ngFor="let p of presets" class="mdl-menu__item" (click)="selectedPreset(p)">{{ p }}</li>
     </ul>
  </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-left-table',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftTableComponent implements OnInit {
 
+  @Input() selectedPreset;
   tables = ['Pricing Summary', 'Hedging', 'Pricing at Different Funding Levels'];
   choice = "";
 
@@ -14,11 +15,12 @@ export class LeftTableComponent implements OnInit {
 
   ngOnInit() {
     this.tables.forEach((c) => console.log(c));
+    console.log("selected Preset from Left Table " + this.selectedPreset);
   }
 
   selectTable(selectedChoice) {
-    this.choice = selectedChoice;
-    console.log(this.choice);
+    console.log("LOG: left table selected: " + selectedChoice);
+    return this.choice = selectedChoice;
   }
 
 }
