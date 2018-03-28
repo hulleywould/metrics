@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 
@@ -10,7 +11,7 @@ import { BigTableComponent } from './metrics/big-table/big-table.component';
 import { MetricsComponent } from './metrics/metrics.component';
 import { PresetsComponent } from './metrics/presets/presets.component';
 import { TablesComponent } from './metrics/tables/tables.component';
-import { PricingSummaryComponent } from './metrics/tables/pricing-summary/pricing-summary.component';
+import { PricingSummaryComponent, Accordion } from './metrics/tables/pricing-summary/pricing-summary.component';
 import { HedgingComponent } from './metrics/tables/hedging/hedging.component';
 import { TableChoiceComponent } from './metrics/table-choice/table-choice.component';
 
@@ -26,10 +27,12 @@ import { TableChoiceComponent } from './metrics/table-choice/table-choice.compon
     TablesComponent,
     PricingSummaryComponent,
     HedgingComponent,
+    Accordion,
     TableChoiceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
